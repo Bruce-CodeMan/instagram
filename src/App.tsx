@@ -1,9 +1,12 @@
-
+// Custom Imports
+import Header from "./containers/Header"
 
 function App() {
 
   return (
-   <div className="text-orange-400">sss</div>
+   <div>
+    <Header />
+   </div>
   )
 }
 
