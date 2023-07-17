@@ -1,7 +1,8 @@
-import { AiOutlineSearch } from "react-icons/ai";
+import { MagnifyingGlassIcon, PlusCircleIcon, HomeIcon } from "@heroicons/react/24/solid";
 
 import Logo from "@/images/logo.jpg"
 import SmallLogo from "@/images/s_logo.png";
+import Author from "@/images/author.jpg";
 
 const Header = () => {
   return (
@@ -12,13 +13,13 @@ const Header = () => {
           <img src={Logo} alt="" className="mt-4"/>
           </div>
         <div className="h-24 w-10 relative lg:hidden cursor-pointer">
-          <img src={SmallLogo} alt="" className="mt-4"/>
+          <img src={SmallLogo} alt="" className="mt-5"/>
         </div>
 
       {/* Middle */}
       <div className="relative mt-1">
         <div className="absolute left-2 top-1.5">
-          <AiOutlineSearch className="text-gray-500"/>
+          <MagnifyingGlassIcon className="text-gray-500 w-4 h-4"/>
         </div>
         <input 
           type="text" 
@@ -27,7 +28,11 @@ const Header = () => {
         />
       </div>
       {/* Right */}
-      <h1>Login</h1>
+      <div className="flex space-x-4 items-center">
+        <HomeIcon className="hidden md:inline-flex h-6 cursor-pointer hover:scale-125 transition-transform duration-200"/>
+        <PlusCircleIcon className="h-6 cursor-pointer hover:scale-125 transition-transform duration-200"/>
+        <img src={Author} alt="" className="h-6 rounded-full"/>
+      </div>
     </div>
     </div>
   )
