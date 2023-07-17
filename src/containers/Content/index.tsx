@@ -1,4 +1,5 @@
 import Stories from "../Stories";
+import Posts from "../Posts";
 
 const Content = () => {
     return (
@@ -7,6 +8,7 @@ const Content = () => {
                 {/* Stories */}
                 <Stories />
                 {/* Posts */}
+                <Posts />
             </section>
 
             <section>
