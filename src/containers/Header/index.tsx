@@ -2,7 +2,6 @@ import { MagnifyingGlassIcon, PlusCircleIcon, HomeIcon } from "@heroicons/react/
 
 import Logo from "@/images/logo.jpg"
 import SmallLogo from "@/images/s_logo.png";
-import Author from "@/images/author.jpg";
 
 const Header = () => {
   return (
@@ -31,7 +30,7 @@ const Header = () => {
       <div className="flex space-x-4 items-center">
         <HomeIcon className="hidden md:inline-flex h-6 cursor-pointer hover:scale-125 transition-transform duration-200"/>
         <PlusCircleIcon className="h-6 cursor-pointer hover:scale-125 transition-transform duration-200"/>
-        <img src={Author} alt="" className="h-6 rounded-full"/>
+        <img src="https://i.pravatar.cc/150?img=1" alt="" className="h-8 rounded-full cursor-pointer"/>
       </div>
     </div>
     </div>

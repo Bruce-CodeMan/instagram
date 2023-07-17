@@ -6,11 +6,11 @@ function App() {
 
   return (
    <div>
-    {/* Header */}
-    <Header />
+      {/* Header */}
+      <Header />
 
-    {/* Content */}
-    <Content />
+      {/* Content */}
+      <Content />
    </div>
   )
 }
