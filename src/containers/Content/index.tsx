@@ -1,6 +1,7 @@
 import Stories from "../Stories";
 import Posts from "../Posts";
 import MiniPorfile from "../MiniProfile";
+import Suggections from "../Suggestions";
 
 const Content = () => {
     return (
@@ -17,7 +18,7 @@ const Content = () => {
                     {/* Mini Profile */}
                     <MiniPorfile />
                     {/* Suggections */}
-
+                    <Suggections />
                 </div>
 
             </section>
