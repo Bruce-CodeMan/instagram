@@ -8,14 +8,19 @@ import { BrowserRouter, Route, Routes } from "react-router-dom"
 
 // Custom Imports
 import Login from '@/containers/Login/index.tsx'
+import UserInfo from './components/UserInfo/index.tsx'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <ApolloProvider client={client}>
     <BrowserRouter>
-      <Routes>
-        <Route path='/login' element={<Login />}></Route>
-        <Route path='/' element={<App />}></Route>
-      </Routes>
+      <UserInfo>
+      
+        <Routes>
+          <Route path='/login' element={<Login />}></Route>
+          <Route path='/' element={<App />}></Route>
+        </Routes>
+      
+      </UserInfo>
     </BrowserRouter>
   </ApolloProvider>
 )

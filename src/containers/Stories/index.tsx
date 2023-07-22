@@ -45,7 +45,6 @@ const Stories = () => {
         }
     ]
     
-    console.log(storyUsers)
     return (
         <div className="flex space-x-2 p-6 bg-gray-200 mt-8 border-white border overflow-x-scroll scrollbar-none">
             {

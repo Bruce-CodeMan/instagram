@@ -1,9 +1,14 @@
 import { MagnifyingGlassIcon, PlusCircleIcon, HomeIcon } from "@heroicons/react/24/solid";
 
+// Custom Imports
 import Logo from "@/images/logo.jpg"
 import SmallLogo from "@/images/s_logo.png";
+import { useUserContext } from "@/hooks/userHooks";
 
 const Header = () => {
+
+  const { store } = useUserContext();
+
   return (
     <div className="shadow-sm border-b sticky top-0 bg-white z-30">
       <div className="flex items-center justify-between max-w-6xl mx-4 xl:mx-auto">
@@ -30,7 +35,7 @@ const Header = () => {
       <div className="flex space-x-4 items-center">
         <HomeIcon className="hidden md:inline-flex h-6 cursor-pointer hover:scale-125 transition-transform duration-200"/>
         <PlusCircleIcon className="h-6 cursor-pointer hover:scale-125 transition-transform duration-200"/>
-        <img src="https://i.pravatar.cc/150?img=1" alt="" className="h-8 rounded-full cursor-pointer"/>
+        <img src={`https://i.pravatar.cc/150?img=${store.avatar}`} alt="" className="h-8 transition-transform duration-200 rounded-full hover:scale-125 cursor-pointer"/>
       </div>
     </div>
     </div>
