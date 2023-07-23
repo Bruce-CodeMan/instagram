@@ -1,13 +1,16 @@
 import { MagnifyingGlassIcon, PlusCircleIcon, HomeIcon } from "@heroicons/react/24/solid";
+import { useRecoilState } from "recoil"
 
 // Custom Imports
 import Logo from "@/images/logo.jpg"
 import SmallLogo from "@/images/s_logo.png";
 import { useUserContext } from "@/hooks/userHooks";
+import { modalState } from "@/atom/modalAtom";
 
 const Header = () => {
 
   const { store } = useUserContext();
+  const [open, setOpen] = useRecoilState(modalState)
 
   return (
     <div className="shadow-sm border-b sticky top-0 bg-white z-30">
@@ -34,7 +37,10 @@ const Header = () => {
       {/* Right */}
       <div className="flex space-x-4 items-center">
         <HomeIcon className="hidden md:inline-flex h-6 cursor-pointer hover:scale-125 transition-transform duration-200"/>
-        <PlusCircleIcon className="h-6 cursor-pointer hover:scale-125 transition-transform duration-200"/>
+        <PlusCircleIcon 
+          className="h-6 cursor-pointer hover:scale-125 transition-transform duration-200"
+          onClick={() => setOpen(true)}
+        />
         <img src={`https://i.pravatar.cc/150?img=${store.avatar}`} alt="" className="h-8 transition-transform duration-200 rounded-full hover:scale-125 cursor-pointer"/>
       </div>
     </div>
