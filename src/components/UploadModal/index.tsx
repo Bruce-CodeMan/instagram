@@ -3,6 +3,7 @@ import Modal from "react-modal"
 import { useRef, useState } from "react";
 import { CameraIcon } from "@heroicons/react/24/outline";
 
+// Custom Imports
 import { modalState } from "@/atom/modalAtom";
 
 
@@ -10,7 +11,9 @@ const UploadModal = () => {
 
   const [open, setOpen] = useRecoilState(modalState);
   const filePickerRef= useRef<HTMLInputElement | null>(null)
+  const captionRef = useRef<HTMLInputElement | null>(null)
   const [selectedFile, setSelectedFile] = useState<string | null>(null)
+  const [loading, setLoading] = useState(false)
 
   const addImageToPost = (event: React.ChangeEvent<HTMLInputElement>) => {
     const reader = new FileReader();
@@ -53,7 +56,10 @@ const UploadModal = () => {
             
             <input type="file" hidden ref={filePickerRef} onChange={addImageToPost}/>
             <input type="text" maxLength={150} placeholder="enter your caption" className="mt-4 w-full text-center focus:outline-none"/>
-            <button className="w-full rounded-md bg-red-600 text-white p-2 mt-4 shadow-md hover:brightness-125">Upload File</button>
+            <button 
+              disabled={!selectedFile || loading}
+              className="w-full rounded-md bg-red-600 text-white p-2 mt-4 shadow-md hover:brightness-125 disabled:bg-gray-200 disabled:cursor-not-allowed disabled:hover:brightness-100"
+            >Upload File</button>
           </div>
         </Modal>
       )}
