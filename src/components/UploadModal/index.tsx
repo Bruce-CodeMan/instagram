@@ -28,7 +28,6 @@ const UploadModal = () => {
 
   return (
     <div>
-      <h1>Upload modal</h1>
       {open && (
         <Modal
           isOpen={open}
