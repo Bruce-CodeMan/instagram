@@ -31,7 +31,7 @@ const Header = () => {
         <input 
           type="text" 
           placeholder="Search"
-          className="bg-gray-50 pl-10 border-gray-500 text-sm focus:ring-black rounded-md py-1"
+          className="bg-gray-50 pl-10 border-gray-500 focus:outline-none text-sm rounded-md py-1"
         />
       </div>
       {/* Right */}
